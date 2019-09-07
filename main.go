@@ -35,7 +35,7 @@ func dbConn() (db *sql.DB) {
 
 func getCountryAll(w http.ResponseWriter, r *http.Request) {
 	db := dbConn()
-	result, err := db.Query("SELECT * FROM city LIMIT 1000;")
+	result, err := db.Query("SELECT * FROM city;")
 
 	if err != nil {
         panic(err.Error())
